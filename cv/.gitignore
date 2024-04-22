@@ -1,0 +1,16 @@
+# Aux files #
+###################
+*.DS_Store 
+*.bib
+*.bbl
+*.blg
+*.cls 
+*.aux 
+*.bcf 
+*.fdb_latexmk 
+*.fls 
+*.log 
+*.out 
+*.run.xml 
+*.synctex.gz 
+*.synctex.gz

@@ -1,0 +1,227 @@
+\documentclass[margin,line, 10pt]{cv}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{fontawesome}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{hypercolor}{HTML}{800000}
+\definecolor{top}{HTML}{ff0000} 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=hypercolor,
+}
+
+\usepackage{fancyhdr}
+\usepackage[defernumbers=true]{biblatex}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{lastpage}
+{
+    \fancyfoot[L] {\sffamily \thepage}    
+    \fancyfoot[R] {\sffamily{Last updated on \today}}
+}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\sffamily \thepage}
+
+\usepackage{mathpazo} 
+\usepackage{eulervm}
+% \usepackage[default]{sourcesanspro}
+% \usepackage[T1]{fontenc}
+
+% \usepackage{fontspec}
+% \setmainfont[
+% BoldFont = Source Sans Pro-{Semi-bold}]{Source Sans Pro}
+% \setmainfont{Caladea}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+% if using pdflatex:
+%\setlength{\pdfpagewidth}{\paperwidFth}
+%\setlength{\pdfpageheight}{\paperheight} 
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\begin{document}
+
+\name{Daniel C Posmik \vspace*{.1in}} 
+
+\begin{resume}
+\section{\sc Contact}
+Brown University, School of Public Health \hfill \href{mailto:daniel_posmik@brown.edu}{daniel{\textunderscore}posmik@brown.edu}\\
+Department of Biostatistics \hfill \hfill \href{https://posmikdc.github.io}{\texttt posmikdc.github.io}\\
+129 S Main St, Providence, RI 02903 \hfill +1 (224) 507-4045 
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION 
+%----------------------------------------------------------------------------------------
+\section{\sc Education}
+{\bf Brown University} \hfill Providence, RI
+
+\vspace{-0.4cm}
+Ph.D. in Biostatistics \hfill {Exp. 2029}
+
+\vspace*{.05in}  
+\begin{list2}
+  \item Advisor: \emph{TBD}
+  \item Interests: \emph{Causal Inference; Network Interference and Prediction; Nonparametric Methods; Dynamic Treatment Regimes; Environmental Epidemiology}
+\end{list2}
+
+{\bf University of Chicago} \hfill Chicago, IL
+
+\vspace{-0.4cm}
+Graduate Student at Large (GSAL) \hfill {2024}
+
+{\bf University of Cincinnati} \hfill Cincinnati, OH 
+
+\vspace{-0.4cm}
+Data Analytics (BSc), Economics (BBA), Mathematics Minor \hfill {2022}\\
+Business Administration (Associate of Arts) \hfill {2020}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{\sc Publications} 
+[1] Posmik, Daniel C. (2022). \href{https://ir.library.louisville.edu/jsfa/vol51/iss3/4/}{Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach}, Journal of Student Financial Aid 51.3  
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH
+%----------------------------------------------------------------------------------------
+\section{\sc Research Experience}
+{\bf Department of Comparative Human Development}, University of Chicago \hfill Chicago, IL\\
+{\em Graduate Research Assistant} \hfill {Jan. 2024 - May 2024}\\
+Supported Professor \href{https://voices.uchicago.edu/ghong/}{Guanglei Hong}'s research on causal decomposition and mediation analysis
+
+\vspace*{.05in}  
+\begin{list2}
+\item Assessed instrumental variables (IV) approaches in sequential and multi-site treatment settings  
+\item Applied compliance score weighting to estimate local average treatment regime effects via IV
+\item Explored Bayesian identification, specifically treatment re-randomization via cumulative priors 
+\end{list2}
+
+{\bf Energy \& Environment Lab}, University of Chicago \hfill Chicago, IL\\ 
+{\em Project Associate} \hfill {Jan. 2023 - Aug. 2023}\\
+Supported the \href{https://urbanlabs.uchicago.edu/labs/energy-environment}{E\&E Lab}'s portfolio at the intersection of causal inference and machine learning
+
+\vspace*{.05in}  
+\begin{list2}
+\item Coordinated an RCT on the effect of agricultural machinery on illegal burning of crop residue
+\item Applied PCA to high-dimensional remote sensing data to construct a burn index for analysis
+\item Implemented a random forest algorithm to predict firm-level environmental violations
+\end{list2}
+
+%----------------------------------------------------------------------------------------
+%	HONORS
+%----------------------------------------------------------------------------------------
+\section{\sc Honors and Awards} 
+McCall MacBain Finalist Award (Deferred for Ph.D.) (20 out of 400+ applicants) \hfill 2024
+
+\vspace*{-2.5mm}
+Presidential Leadership Medal of Excellence (4 yearly recipients; university-wide) \hfill 2022
+
+\vspace*{-2.5mm}
+Non-Traditional Student of the Year (1 yearly recipient; college-wide) \hfill 2022
+
+\vspace*{-2.5mm}
+Annie Fitzgerald Community Service Award (2 yearly recipients; university-wide) \hfill 2021
+
+%----------------------------------------------------------------------------------------
+%    TEACHING EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{\sc Teaching Experience}
+{\bf Department of Economics}, University of Chicago \hfill Chicago, IL\\
+{\em Teaching Assistant: ECON21020 - Econometrics} \hfill {Spring 2024}
+
+\vspace*{.05in}
+\begin{list2}
+\item Topics: \emph{Statistical Inference, Linear Regression, Panel Data Regression, Causal Inference}
+\item Hosted weekly discussion sections and held office hours for 40 students 
+\item Graded assignments and exams; responded to student questions in timely manner  
+\end{list2}
+
+%----------------------------------------------------------------------------------------
+%    PRESENTATIONS & TALKS
+%----------------------------------------------------------------------------------------
+\section{\sc Presentations \& Talks}
+{\bf Scholarly Presentations}
+\vspace{-.3cm}
+
+Becker Friedman Institute for Economic Research Journal Club (\emph{Presenter}) \hfill 2023 \\ 
+Federal Reserve Bank Economic Scholars Conference (\emph{Presenter}) \hfill 2022 \\ 
+
+\vspace*{-.3cm}
+{\bf Conferences Attended}
+\vspace{-.3cm}
+
+BIRS Workshop (\emph{Causal Inference and Prediction for Network Data}); Summer School at the Technical University of Munich (\emph{Causal Graphical Models}) \hfill 2024
+
+%----------------------------------------------------------------------------------------
+%    INDUSTRY EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{\sc Industry Experience}
+{\bf The Brattle Group} \hfill Boston, MA\\ 
+{\em Research Analyst} \hfill {July 2023 - Dec. 2023}\\
+Worked within \href{https://www.brattle.com/practices/electricity-wholesale-markets-planning/}{Brattle's Electricity Group} on projects in wholesale and retail electricity planning
+
+\vspace*{.05in}  
+\begin{list2}
+\item Analyzed energy congestion patterns to inform a utility’s \$10m transmission investment
+\item Developed a cost-benefit model for the electrification of school bus fleets with IRA grants
+\end{list2}
+
+%----------------------------------------------------------------------------------------
+%    COMMUNITY SERVICE
+%----------------------------------------------------------------------------------------
+\section{\sc Community Service}
+{\bf The Data Science Institute}, University of Chicago \hfill Chicago, IL\\ 
+{\em Community Data Fellow} \hfill {Sep. 2023 - Dec. 2023}\\
+Created a \href{https://public.tableau.com/app/profile/daniel.posmik/viz/DSI_CEI_Dashboard_draft/Dashboard1}{dashboard} for the State of Illinois' Commission on Equity \& Inclusion
+
+\vspace*{.05in}  
+\begin{list2}
+\item Visualized and summarized spatio-temporal impact data from the \textit{Business Enterprise Program}
+\item Embedded dashboard on website and maintained communication with project stakeholders
+\end{list2}
+
+{\bf The Neo Initiative} \hfill Cincinnati, OH\\ 
+{\em Founder and President} \hfill {June 2020 - Jan. 2022}\\
+Founded a \href{https://www.linkedin.com/company/neo-initiative/}{student-led data analytics accelerator} for minority-owned small businesses in the U.S. 
+
+\vspace*{.05in}  
+\begin{list2}
+\item Served 15 black-owned small businesses with pro-bono consulting services in data analytics
+\item Coordinated 6 executive officers, 5 project leads, 5 mentors, and 30 analysts each semester
+\item Hosted a virtual state-sponsored data literacy series, reaching 300+ minority-owned businesses
+\end{list2}
+
+%----------------------------------------------------------------------------------------
+%    SKILLS AND INTERESTS
+%----------------------------------------------------------------------------------------
+\section{\sc Skills and Interests} 
+Programming: R, Python, \LaTeX, Tableau, Git, Linux, Lua\\
+Languages: English (Fluent), German (Native), French (Advanced), Latin (Intermediate)\\
+Interests: Mountaineering, Backpacking, Vipassana Meditation, Rock Climbing
+
+\end{resume}
+\thispagestyle{lastpage}
+\end{document}
+
+
+
+
