@@ -20,8 +20,8 @@ Contains my customized beamer template, `beamertheme.sty`.
 
 This file (and its components) is inspired by and modified from: 
  
-- Auriga theme (https://github.com/anishathalye/auriga) 
-- The Legrand Orange Book (https://www.latextemplates.com/template/legrand-orange-book)
+- [Auriga theme](https://github.com/anishathalye/auriga) 
+- [The Legrand Orange Book](https://www.latextemplates.com/template/legrand-orange-book)
 
 ### `cv`
 
