@@ -1,123 +1,155 @@
-\documentclass[margin,line, 10pt]{cv}
+% Daniel Posmik's Curriculum Vitae
+% Email: daniel_posmik@brown.edu 
+% CV template from: https://github.com/gboeing/cv/blob/main/cv-gboeing.tex
 
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{fontawesome}
-\usepackage[dvipsnames]{xcolor}
-\definecolor{hypercolor}{HTML}{800000}
-\definecolor{top}{HTML}{ff0000} 
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    urlcolor=hypercolor,
-}
+\documentclass[11pt,letterpaper]{report}
 
-\usepackage{fancyhdr}
-\usepackage[defernumbers=true]{biblatex}
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\fancypagestyle{lastpage}
-{
-    \fancyfoot[L] {\sffamily \thepage}    
-    \fancyfoot[R] {\sffamily{Last updated on \today}}
-}
-\fancyhead{}
-\fancyfoot{}
-\fancyfoot[L]{\sffamily \thepage}
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto}    % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+\usepackage{setspace} % custom line spacing
 
-\usepackage{mathpazo} 
-\usepackage{eulervm}
-% \usepackage[default]{sourcesanspro}
-% \usepackage[T1]{fontenc}
+% name 
+\newcommand{\myname}{Daniel C. Posmik}
 
-% \usepackage{fontspec}
-% \setmainfont[
-% BoldFont = Source Sans Pro-{Semi-bold}]{Source Sans Pro}
-% \setmainfont{Caladea}
+% select default typefaces
+\usepackage{ebgaramond} % document's serif typeface
+\usepackage{tgheros}    % document's sans serif typeface
 
-\oddsidemargin -.5in
-\evensidemargin -.5in
-\textwidth=6.0in
-\itemsep=0in
-\parsep=0in
-% if using pdflatex:
-%\setlength{\pdfpagewidth}{\paperwidFth}
-%\setlength{\pdfpageheight}{\paperheight} 
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
 
-\newenvironment{list1}{
-  \begin{list}{\ding{113}}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
-      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% make bulleted compact lists 
 \newenvironment{list2}{
-  \begin{list}{$\bullet$}{%
+  \begin{list}{\tiny$\bullet$}{%
       \setlength{\itemsep}{0in}
       \setlength{\parsep}{0in} \setlength{\parskip}{0in}
       \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
 
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {biostatistics, causal inference, statistical network analysis, nonparametric statistics},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
 \begin{document}
+\raggedright{}
 
-\name{Daniel C Posmik \vspace*{.1in}} 
+% display your name as the document title
+\namefont{\myname}
 
-\begin{resume}
-\section{\sc Contact}
-Brown University, School of Public Health \hfill \href{mailto:daniel_posmik@brown.edu}{daniel{\textunderscore}posmik@brown.edu}\\
-Department of Biostatistics \hfill \hfill \href{https://posmikdc.github.io}{\texttt posmikdc.github.io}\\
-129 S Main St, Providence, RI 02903 \hfill +1 (224) 507-4045 
+% affiliation and contact info blocks
+\vspace{1em}
+\begin{minipage}[t]{0.700\textwidth}
+% current primary affiliation, left-aligned
+Department of Biostatistics \\
+Brown University, School of Public Health \\
+129 S Main St, Providence, RI 02903 
+\end{minipage}
+\begin{minipage}[t]{0.295\textwidth}
+% contact info details, right-aligned
+\flushright{}
+\href{mailto:daniel_posmik@brown.edu}{daniel{\textunderscore}posmik@brown.edu} \\
++1 224 507 4045 \\
+\href{https://posmikdc.github.io}{posmikdc.github.io}
+\end{minipage}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION 
-%----------------------------------------------------------------------------------------
-\section{\sc Education}
-{\bf Brown University} \hfill Providence, RI
+\section*{Education}
 
-\vspace{-0.4cm}
-Ph.D. in Biostatistics \hfill {Exp. 2029}
+\begin{tablist}
+\item[Ph.D.] \tab{}Biostatistics, Brown University \hfill \emph{Exp.} 2029
+\item[GSAL]  \tab{}Graduate Student at Large (Statistics), University of Chicago \hfill 2024
+\item[B.S.]  \tab{}Economics and Data Science, Mathematics Minor, University of Cincinnati \hfill 2022
+\item[A.A.] \tab{}Business Administration, University of Cincinnati, Blue Ash College \hfill 2020
+\end{tablist}
 
-\vspace*{.05in}  
-\begin{list2}
-  \item Advisor: \emph{TBD}
-  \item Interests: \emph{Causal Inference; Network Interference and Prediction; Nonparametric Methods; Dynamic Treatment Regimes; Environmental Epidemiology}
-\end{list2}
+\section*{Publications}
 
-{\bf University of Chicago} \hfill Chicago, IL
+\begin{tablist}
+\item[2022] \tab{}Posmik, D.C. \enquote{Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach.} \textit{Journal of Student Financial Aid}, 51 (3), \href{https://ir.library.louisville.edu/jsfa/vol51/iss3/4}{Article 4}. 
+\end{tablist}
 
-\vspace{-0.4cm}
-Graduate Student at Large (GSAL) \hfill {2024}
+\section*{Research Experience}
 
-{\bf University of Cincinnati} \hfill Cincinnati, OH 
-
-\vspace{-0.4cm}
-Data Analytics (BSc), Economics (BBA), Mathematics Minor \hfill {2022}\\
-Business Administration (Associate of Arts) \hfill {2020}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{\sc Publications} 
-[1] Posmik, Daniel C. (2022). \href{https://ir.library.louisville.edu/jsfa/vol51/iss3/4/}{Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach}, Journal of Student Financial Aid 51.3  
-
-%----------------------------------------------------------------------------------------
-%	RESEARCH
-%----------------------------------------------------------------------------------------
-\section{\sc Research Experience}
-{\bf Department of Comparative Human Development}, University of Chicago \hfill Chicago, IL\\
-{\em Graduate Research Assistant} \hfill {Jan. 2024 - May 2024}\\
-Supported Professor \href{https://voices.uchicago.edu/ghong/}{Guanglei Hong}'s research on causal decomposition and mediation analysis
+\begin{tablist}
+\item[2023--24] \tab{}University of Chicago, Chicago, IL\\ 
+Graduate Research Assistant, Department of Comparative Human Development, 2024\\  
+\emph{Supported Professor \href{https://voices.uchicago.edu/ghong/}{Guanglei Hong}'s research on causal decomposition and mediation analysis.}
 
 \vspace*{.05in}  
 \begin{list2}
-\item Assessed instrumental variables (IV) approaches in sequential and multi-site treatment settings  
+\item Assessed instrumental variables (IV) approaches in sequential and multi-site treatment settings 
 \item Applied compliance score weighting to estimate local average treatment regime effects via IV
 \item Explored Bayesian identification, specifically treatment re-randomization via cumulative priors 
 \end{list2}
 
-{\bf Energy \& Environment Lab}, University of Chicago \hfill Chicago, IL\\ 
-{\em Project Associate} \hfill {Jan. 2023 - Aug. 2023}\\
-Supported the \href{https://urbanlabs.uchicago.edu/labs/energy-environment}{E\&E Lab}'s portfolio at the intersection of causal inference and machine learning
+\vspace*{.1in}
+Project Associate, UChicago Energy \& Environment Lab, 2023\\  
+\emph{Supported the \href{https://urbanlabs.uchicago.edu/labs/energy-environment}{E\&E Lab}'s portfolio at the intersection of causal inference and machine learning.}
 
 \vspace*{.05in}  
 \begin{list2}
@@ -125,73 +157,62 @@ Supported the \href{https://urbanlabs.uchicago.edu/labs/energy-environment}{E\&E
 \item Applied PCA to high-dimensional remote sensing data to construct a burn index for analysis
 \item Implemented a random forest algorithm to predict firm-level environmental violations
 \end{list2}
+\end{tablist}
 
-%----------------------------------------------------------------------------------------
-%	HONORS
-%----------------------------------------------------------------------------------------
-\section{\sc Honors and Awards} 
-McCall MacBain Finalist Award (Deferred for Ph.D.) (20 out of 400+ applicants) \hfill 2024
+\section*{Presentations \& Talks}
 
-\vspace*{-2.5mm}
-Presidential Leadership Medal of Excellence (4 yearly recipients; university-wide) \hfill 2022
+\subsection*{Scholarly Presentations}
+\begin{tablist}
+\item[2022] \tab{}Posmik, D.C. \enquote{Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach}, Economics Scholars Conference at the Federal Reserve Bank, Cleveland, OH, May 2. 
+\item[2021] \tab{}Posmik, D.C. \textemdash{}"\textemdash{}, University of Cincinnati Undergraduate Capstone Competition, Cincinnati, OH, April 28. 
+\end{tablist}
 
-\vspace*{-2.5mm}
-Non-Traditional Student of the Year (1 yearly recipient; college-wide) \hfill 2022
+\subsection*{Talks}
+\begin{tablist}
+\item[2021] \tab{}Posmik, D.C. \enquote{Telling Stories with Data}, \href{https://www.youtube.com/watch?v=-Le0WTfBuBY}{TEDxUCincinnati}, Cincinnati, OH, Mar 23. 
+\end{tablist}
 
-\vspace*{-2.5mm}
-Annie Fitzgerald Community Service Award (2 yearly recipients; university-wide) \hfill 2021
+\section*{Grants and Awards}
 
-%----------------------------------------------------------------------------------------
-%    TEACHING EXPERIENCE
-%----------------------------------------------------------------------------------------
-\section{\sc Teaching Experience}
-{\bf Department of Economics}, University of Chicago \hfill Chicago, IL\\
-{\em Teaching Assistant: ECON21020 - Econometrics} \hfill {Spring 2024}
+\subsection*{Awards and Honors}
+\begin{tablist}
+\item[2024] \tab{} McCall MacBain Finalist Award (Deferred for Ph.D.) (80 out of 1,000+ applicants)
+\item[2022] \tab{} Presidential Leadership Medal of Excellence (4 yearly recipients; university-wide) 
+\item[2022] \tab{} Non-Traditional Student of the Year (1 yearly recipient; college-wide) 
+\item[2021] \tab{} Annie Fitzgerald Community Service Award (2 yearly recipients; university-wide)
+\end{tablist}
 
-\vspace*{.05in}
+\subsection*{Competitive Grants and Fellowships}
+
+\begin{tablist}
+  \item[2023] \tab{} Community Data Fellowship, University of Chicago Data Science Institute (\$4,000)
+\end{tablist}
+
+\section*{Professional Service}
+
+\subsection*{Academic Journal Peer Review}
+\begin{tablist}
+  \item[2022] \tab{} \emph{Journal of Student Financial Aid}
+\end{tablist}
+
+\section*{Teaching}
+
+\begin{tablist}
+\item[2024] \tab{}University of Chicago, Department of Economics, Chicago, IL\\ 
+Teaching Assistant, Econometrics (ECON21020), Spring 2024\\ 
+\vspace*{.05in}  
 \begin{list2}
-\item Topics: \emph{Statistical Inference, Linear Regression, Panel Data Regression, Causal Inference}
 \item Hosted weekly discussion sections and held office hours for 40 students 
 \item Graded assignments and exams; responded to student questions in timely manner  
 \end{list2}
+\end{tablist} 
 
-%----------------------------------------------------------------------------------------
-%    PRESENTATIONS & TALKS
-%----------------------------------------------------------------------------------------
-\section{\sc Presentations \& Talks}
-{\bf Scholarly Presentations}
-\vspace{-.3cm}
+\section*{Community Service}
 
-Becker Friedman Institute for Economic Research Journal Club (\emph{Presenter}) \hfill 2023 \\ 
-Federal Reserve Bank Economic Scholars Conference (\emph{Presenter}) \hfill 2022 \\ 
-
-\vspace*{-.3cm}
-{\bf Conferences Attended}
-\vspace{-.3cm}
-
-BIRS Workshop (\emph{Causal Inference and Prediction for Network Data}); Summer School at the Technical University of Munich (\emph{Causal Graphical Models}) \hfill 2024
-
-%----------------------------------------------------------------------------------------
-%    INDUSTRY EXPERIENCE
-%----------------------------------------------------------------------------------------
-\section{\sc Industry Experience}
-{\bf The Brattle Group} \hfill Boston, MA\\ 
-{\em Research Analyst} \hfill {July 2023 - Dec. 2023}\\
-Worked within \href{https://www.brattle.com/practices/electricity-wholesale-markets-planning/}{Brattle's Electricity Group} on projects in wholesale and retail electricity planning
-
-\vspace*{.05in}  
-\begin{list2}
-\item Analyzed energy congestion patterns to inform a utility’s \$10m transmission investment
-\item Developed a cost-benefit model for the electrification of school bus fleets with IRA grants
-\end{list2}
-
-%----------------------------------------------------------------------------------------
-%    COMMUNITY SERVICE
-%----------------------------------------------------------------------------------------
-\section{\sc Community Service}
-{\bf The Data Science Institute}, University of Chicago \hfill Chicago, IL\\ 
-{\em Community Data Fellow} \hfill {Sep. 2023 - Dec. 2023}\\
-Created a \href{https://public.tableau.com/app/profile/daniel.posmik/viz/DSI_CEI_Dashboard_draft/Dashboard1}{dashboard} for the State of Illinois' Commission on Equity \& Inclusion
+\begin{tablist}
+\item[2023] \tab{}University of Chicago, Chicago, IL\\ 
+Community Data Fellow, UChicago Data Science Institute\\  
+\emph{Created a \href{https://public.tableau.com/app/profile/daniel.posmik/viz/DSI_CEI_Dashboard_draft/Dashboard1}{dashboard} for the State of Illinois' Commission on Equity \& Inclusion.}
 
 \vspace*{.05in}  
 \begin{list2}
@@ -199,9 +220,9 @@ Created a \href{https://public.tableau.com/app/profile/daniel.posmik/viz/DSI_CEI
 \item Embedded dashboard on website and maintained communication with project stakeholders
 \end{list2}
 
-{\bf The Neo Initiative} \hfill Cincinnati, OH\\ 
-{\em Founder and President} \hfill {June 2020 - Jan. 2022}\\
-Founded a \href{https://www.linkedin.com/company/neo-initiative/}{student-led data analytics accelerator} for minority-owned small businesses in the U.S. 
+\item[2020--22] \tab{}The Neo Initiative, Cincinnati, OH\\ 
+Founder and President\\  
+\emph{Founded a \href{https://www.linkedin.com/company/neo-initiative/}{student-led data analytics accelerator} for minority-owned small businesses in the U.S.} 
 
 \vspace*{.05in}  
 \begin{list2}
@@ -209,19 +230,20 @@ Founded a \href{https://www.linkedin.com/company/neo-initiative/}{student-led da
 \item Coordinated 6 executive officers, 5 project leads, 5 mentors, and 30 analysts each semester
 \item Hosted a virtual state-sponsored data literacy series, reaching 300+ minority-owned businesses
 \end{list2}
+\end{tablist}
 
-%----------------------------------------------------------------------------------------
-%    SKILLS AND INTERESTS
-%----------------------------------------------------------------------------------------
-\section{\sc Skills and Interests} 
-Programming: R, Python, \LaTeX, Tableau, Git, Linux, Lua\\
-Languages: English (Fluent), German (Native), French (Advanced), Latin (Intermediate)\\
-Interests: Mountaineering, Backpacking, Vipassana Meditation, Rock Climbing
+\section*{Skills}
 
-\end{resume}
-\thispagestyle{lastpage}
+\subsection*{Programming}
+R, Python, LaTeX, Lua, Tableau, Git 
+
+\subsection*{Languages}
+English (Fluent), German (Native), French (Advanced), Latin (Intermediate)\\
+
+% display today's date as Month Year after a vertical space below the end of the text
+\begin{center}
+  \vfill
+  Updated \monthyeardate\today
+\end{center}
+
 \end{document}
-
-
-
-
