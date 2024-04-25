@@ -25,13 +25,15 @@
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic
 ]
+
 \setmonofont{Hack}
 
-\setbeamerfont{title page}{family=\Raleway}
+\setbeamerfont{title page}{family = \Lato}
 \setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
 \setbeamerfont{title page author}{size=\footnotesize}
 \setbeamerfont{title page institute}{size=\scriptsize}
-\setbeamerfont{frametitle}{family=\Lato,size=\large,series=\bfseries}
+\setbeamerfont{title page date}{size = \scriptsize}
+\setbeamerfont{frametitle}{family = \Lato, size=\large, series = \bfseries}
 \setbeamerfont{caption}{size=\scriptsize}
 \setbeamerfont{footnote}{size=\scriptsize}
 
@@ -40,6 +42,14 @@
 % ====================
 
 \newcommand{\samelineand}{\qquad}
+
+% ====================
+% TOC
+% ====================
+
+% Table of contents
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}{\leavevmode\leftskip=3.2em\rlap{\hskip-2em\inserttocsectionnumber.\inserttocsubsectionnumber}\inserttocsubsection\par}
 
 % ====================
 % Elements
@@ -82,29 +92,41 @@
 % Footnotes
 \setlength{\footnotesep}{0.5\baselineskip}
 
-% Theorems 
-\newtheoremstyle{mytheoremstyle} % Define theorem styles
-  {\topsep}   % Space above
-  {\topsep}   % Space below
-  {\itshape}  % Body font
-  {0pt}       % Indent amount
-  {\bfseries} % Theorem head font
-  {.}        % Punctuation after theorem head
-  { }         % Space after theorem head
-  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} % Theorem head spec (can be left empty, meaning `normal`)
+% Proofs 
+\renewcommand{\qed}{\hfill\scalebox{0.7}{$\blacksquare$}} % Replace QED symbol with scaled small black square
 
-\theoremstyle{mytheoremstyle} % Define theorem environment
-
-\tcolorboxenvironment{theorem}{ % Define a colored box for theorems
-  boxrule=1pt,
-  boxsep=0pt,
-  colback=lightgray, % Background color
-  arc=5pt, % Roundness of corners
-  left=5pt, % Padding on left
-  right=5pt, % Padding on right
-  top=3pt, % Padding on top
-  bottom=3pt % Padding on bottom
+%{
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par
+  \pushQED{\qed}%
+  \normalfont\topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep
+    \parbox{\linewidth}{\itshape\bfseries\small\color{blue} #1\@addpunct{:}}]\ignorespaces % Wrap proof name with \parbox
+}{%
+  \popQED\endtrivlist\@endpefalse
 }
+\makeatother
+%}
+
+% Theorems 
+\setbeamertemplate{theorem begin}{ % Governs theorem formatting
+  \begin{\inserttheoremblockenv}
+    {%
+      \small\bfseries\color{blue}\inserttheoremname\small\bfseries % Theorem name wrapped in small and bold 
+      \small\inserttheoremnumber\---\small\bfseries % Theorem number wrapped in small and bold 
+      \ifx\small\inserttheoremaddition\@empty\else\ \small\inserttheoremaddition\fi% 
+    }%
+    \normalfont%
+}
+
+\setbeamertemplate{theorem end}{%
+    \end{\inserttheoremblockenv}%
+}
+
+% Text boxes
+% TODO -- Find way to format text boxes without overriding some of the config 
 
 % ====================
 % Components
@@ -117,7 +139,8 @@
         \vskip5ex plus 1filll
         {\usebeamerfont{title page title}\bfseries\usebeamercolor[fg]{title page}\inserttitle\\[1.5ex]}
         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\\[2ex]}
-        {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\\[1ex]}
+        {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\\[2ex]}
+        {\usebeamerfont{title page date}\usebeamercolor[fg]{title page}\insertdate}
         \vskip0pt plus 1filll
     \end{centering}
 }
@@ -162,17 +185,18 @@
 \setbeamercolor{palette secondary}{fg=black,bg=white}
 \setbeamercolor{palette tertiary}{bg=black,fg=white}
 \setbeamercolor{palette quaternary}{fg=black,bg=white}
-\setbeamercolor{structure}{fg=darkgray}
+\setbeamercolor{structure}{fg=black}
 
 % Itemize
 \setbeamercolor{item}{fg=darkgray}
 
 % Page numbering
-\setbeamercolor{page number in head/foot}{fg=structure.fg}
+\setbeamercolor{page number in head/foot}{fg=darkgray}
 
 % Frame titles
-%\setbeamercolor{frametitle}{fg=darkgray}
+\setbeamercolor{frametitle}{fg=blue}
 
 % Footnotes
 \setbeamercolor{footnote}{fg=darkgray}
+
 

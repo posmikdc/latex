@@ -1,4 +1,4 @@
-\documentclass[12pt,aspectratio=169]{beamer}
+\documentclass[11pt,aspectratio=169]{beamer}
 \usepackage{pgfpages}
 \usepackage{fancyvrb}
 \usepackage{tikz}
@@ -17,7 +17,9 @@
 
 \institute[shortinst]{\inst{1} \department \\ 
                       \inst{2} Another University, Another Department
-}
+}  
+
+\date{\today}
 
 \begin{document}
 
@@ -35,13 +37,13 @@
     \tableofcontents
 \end{frame}
 
-\section{Test1}
+\section{A Major Theme}
 \begin{frame}{A slide with some bracketed text}
 
 	\begin{itemize}
-		\item Some statement\footnote{This is a footnote.} {\color{gray} [Some citation]}
-		\item Another statement\footnote{This is a footnote.} {\color{gray} [Another citation]}
-		\item A final statement\footnote{This is a footnote.} {\color{gray} [The last citation]}
+		\item Some statement\footnote{This is a footnote.} 
+		\item Another statement\footnote{This is a footnote.}
+    \item A final statement\footnote{This is a footnote.}
 	\end{itemize}
 
 	\vspace{3ex}
@@ -65,18 +67,35 @@
 
 \end{frame}
 
-\section{Test2}
-\begin{frame}{Blocks of Highlighted Text and Theorems}
-In this slide, some important text will be \alert{highlighted} because it's important. Please, don't abuse it.
+\section{The Other Major Theme}
+\begin{frame}{Theorems, Lemmas, Corollaries, Examples, and Proofs}
 
-\begin{mdframed}
-Test
-\end{mdframed}
-
-\begin{theorem}[Fundamental theorem of calculus]
-If a function \( f \) is continuous on the closed interval \([a, b]\) and \( F \) is an antiderivative of \( f \) on \([a, b]\), then
-\[ \int_a^b f(x) \, dx = F(b) - F(a). \]
+\begin{theorem}[The hardest theorem]
+We love hard lemmas, $1 + 1 = 2$
 \end{theorem}
+
+\begin{lemma}[The hardest lemma]
+We love hard lemmas, $1 + 1 = 2$
+\end{lemma}
+
+\begin{corollary}[The hardest corollary]
+We love hard corollaries, $1 + 1 = 2$
+\end{corollary}
+
+\begin{example}[The hardest example]
+We love hard examples, $1 + 1 = 2$
+\end{example}
+
+\begin{proof}
+We love hard proofs, $1 + 1 = 2$
+\end{proof}
+
+\end{frame}
+
+\begin{frame}{Blocks of Highlighted Text}
+In this slide, some important text will be \alert{highlighted} because it's important. Please, don't abuse it. 
+
+
 
 \end{frame}
 
@@ -161,7 +180,9 @@ def foo(x):
     \end{column}
   \end{columns}
 
-\end{frame}
+\end{frame} 
+
+\appendix
 
 \end{document}
 
