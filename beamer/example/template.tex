@@ -1,49 +1,12 @@
-\documentclass[11pt,aspectratio=169]{beamer}
-\usepackage{pgfpages}
-\usepackage{fancyvrb}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{mdframed} %for framed boxes
-\usepackage{amsthm} %for theorem formatting 
-\usepackage{tcolorbox} % For colored boxes
-
-% Include the custom theme and commands
-\usepackage{/Users/posmikdc/Documents/assets/latex/beamer/beamertheme}
-\input{/Users/posmikdc/Documents/assets/latex/globals}
-
-\title{Fancy Title: \\ Followed by Some More Text}
-
-\author{\name \inst{1} \and John Doe \inst{2} \and Don Joe \inst{2}}
-
-\institute[shortinst]{\inst{1} \department \\ 
-                      \inst{2} Another University, Another Department
-}  
-
-\date{\today}
-
-\begin{document}
-
-{
-  % rather than use the frame options [noframenumbering,plain], we make the
-  % color match, so that the indicated page numbers match PDF page numbers
-  \setbeamercolor{page number in head/foot}{fg=background canvas.bg}
-  \begin{frame}
-    \titlepage
-  \end{frame}
-}
-
-\begin{frame}{Overview}
-    % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
-    \tableofcontents
-\end{frame}
-
 \section{A Major Theme}
-\begin{frame}{A slide with some bracketed text}
+\begin{frame}{A slide with footnotes and citations}
 
-	\begin{itemize}
-		\item Some statement\footnote{This is a footnote.} 
-		\item Another statement\footnote{This is a footnote.}
-    \item A final statement\footnote{This is a footnote.}
+A statement referencing \cite{Posmik2022} and with a simple footnote\footnote{Hi, I am a footnote}. 
+
+  \begin{itemize}
+    \item Some statement with an in-line citation in parentheses \parencite{Posmik2022} 
+    \item Another statement with a short citation in the footnote\footcite{Posmik2022}
+    \item A final statement with a long citation in the footnote\footfullcite{Posmik2022} 
 	\end{itemize}
 
 	\vspace{3ex}
@@ -59,7 +22,7 @@
     \item A bulleted item
     \item Another item
       \begin{itemize}
-        \item With sub-bullets\footnote{Test}
+        \item With sub-bullets\footnote{This is also a footnote}
         \item And another, with some \textbf{bold} text
       \end{itemize}
     \item And another, at the top level, with \textit{italic} text
@@ -152,7 +115,7 @@ def foo(x):
       {\color{red} Some explanatory text, in red, with some \texttt{monospace} text.}
       There might be some math, too:
 
-      $$\sqrt{x} + 2x + \sum_{i=1}^{N} x_i^2 + \int_{-\infty}^{+\infty}x~dx$$
+      $$\sum_{i=1}^{N} x_i^2 + \int_{-\infty}^{+\infty}x~dx + \E[X] + \V(X)$$
     \end{column}
   \end{columns}
 
@@ -180,9 +143,5 @@ def foo(x):
     \end{column}
   \end{columns}
 
-\end{frame} 
-
-\appendix
-
-\end{document}
+\end{frame}
 

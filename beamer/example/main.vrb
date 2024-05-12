@@ -16,7 +16,7 @@ def foo(x):
       {\color{red} Some explanatory text, in red, with some \texttt{monospace} text.}
       There might be some math, too:
 
-      $$\sqrt{x} + 2x + \sum_{i=1}^{N} x_i^2 + \int_{-\infty}^{+\infty}x~dx$$
+      $$\sum_{i=1}^{N} x_i^2 + \int_{-\infty}^{+\infty}x~dx + \E[X] + \V(X)$$
     \end{column}
   \end{columns}
 

@@ -1,5 +1,3 @@
-%! TeX program = lualatex -- This "magic comment" forces compilation by LuaLatex engine  
-
 % Identifiers
 \newcommand{\name}{Daniel C. Posmik}
 \newcommand{\department}{Brown University School of Public Health, Department of Biostatistics}
@@ -7,5 +5,43 @@
 \newcommand{\emailpersonal}{posmikdc@gmail.com}
 \newcommand{\cell}{+1 224-507-4045}
 
-% 
+% Footnote Alignment
+\makeatletter % aligns multi-line footnotes properly
+\renewcommand<>\beamer@framefootnotetext[1]{%
+  \global\setbox\beamer@footins\vbox{%
+    \hsize\framewidth
+    \textwidth\hsize
+    \columnwidth\hsize
+    \unvbox\beamer@footins
+    \reset@font\footnotesize
+    \@parboxrestore
+    \protected@edef\@currentlabel
+         {\csname p@footnote\endcsname\@thefnmark}%
+    \color@begingroup
+      \uncover#2{\@makefntext{%
+        \rule\z@\footnotesep\ignorespaces\parbox[t]{.9\textwidth}{#1\@finalstrut\strutbox}\vskip1sp}}%
+    \color@endgroup}%
+}
+\makeatother
+
+% Citations and Bibliography
+\renewcommand*{\nameyeardelim}{\addcomma\addspace} % add comma between author name and year
+\renewcommand{\cite}[1]{\citeauthor{#1} (\citeyear{#1})} % customize \cite to "[Author name] (Year)"
+\renewcommand{\footcite}[1]{\footnote{\citeauthor{#1} (\citeyear{#1})}} % customize \footcite to "[Author name] (Year)"
+%\renewcommand{\footfullcite}[1]{\footnote{\citeauthor{#1}. \citetitle{#1}. (\citeyear{#1})}} % customize \footfullcite to "[Author name]. "[Title]." ([Year])"
+\renewcommand{\footfullcite}[1]{%
+    \AtNextCite{\defcounter{maxnames}{2}\defcounter{minnames}{1}}%
+    \footnote{\citeauthor{#1}\ifnumgreater{\value{labelname}}{2}{\space et al.}{\relax}. \citetitle{#1}. (\citeyear{#1})}%
+}
+
+% Math Abbreviations
+\def\p{\mathrm{P}}
+\def\Pr{\mathrm{Pr}}
+\def\P{\mathbb{P}}
+\def\E{\mathbb{E}}
+\def\V{\mathrm{Var}}
+\def\CV{\mathrm{Cov}}
+\def\X{\mathfrak{X}}
+\def\Sum{\sum\nolimits}
+\def\Prod{\prod\nolimits}
 

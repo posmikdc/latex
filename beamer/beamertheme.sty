@@ -52,6 +52,19 @@
 \setbeamertemplate{subsection in toc}{\leavevmode\leftskip=3.2em\rlap{\hskip-2em\inserttocsectionnumber.\inserttocsubsectionnumber}\inserttocsubsection\par}
 
 % ====================
+% Appendix
+% ====================
+
+\newcommand{\appendixbegin}{
+   \newcounter{framenumberappendix}
+   \setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\appendixend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+
+% ====================
 % Elements
 % ====================
 
@@ -135,14 +148,15 @@
 % Title page
 \setbeamertemplate{title page}
 {
-    \begin{centering}
+  \begin{centering}
         \vskip5ex plus 1filll
-        {\usebeamerfont{title page title}\bfseries\usebeamercolor[fg]{title page}\inserttitle\\[1.5ex]}
+        {\usebeamerfont{title page title}\bfseries\usebeamercolor[fg]{title page}\inserttitle\\[0.5ex]}
+        {\usebeamerfont{title page graphic}\centering\usebeamercolor[fg]{title graphic}\inserttitlegraphic\\[1.5ex]}
         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\\[2ex]}
         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\\[2ex]}
         {\usebeamerfont{title page date}\usebeamercolor[fg]{title page}\insertdate}
         \vskip0pt plus 1filll
-    \end{centering}
+  \end{centering}
 }
 
 % Footer
