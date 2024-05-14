@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{humidity}
+J.~Cai.
+\newblock {\em humidity: Calculate Water Vapor Measures from Temperature and
+  Dew Point}, 2019.
+\newblock R package version 0.1.5.
+
+\bibitem{dong2020interactive}
+E.~Dong, H.~Du, and L.~Gardner.
+\newblock An interactive web-based dashboard to track covid-19 in real time.
+\newblock {\em The Lancet infectious diseases}, 20(5):533--534, 2020.
+
+\bibitem{noaa}
+{National Centers for Environmental Information}.
+\newblock U.s. local climatological data, 2021.
+
+\end{thebibliography}
