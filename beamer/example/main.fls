@@ -695,8 +695,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./main.toc
 INPUT ./main.toc
-INPUT ./template.tex
-INPUT ./template.tex
+INPUT ./slides/template.tex
+INPUT ./slides/template.tex
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
@@ -718,6 +718,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 OUTPUT main.vrb
 INPUT ./main.vrb
 INPUT ./main.vrb
+INPUT ./appendix/appendix-slides.tex
+INPUT ./appendix/appendix-slides.tex
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm

@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1715526055 "main.bcf" "main.bbl" "main" 1715526064
-  "main.bcf" 1715526063 107501 f846a0970f7eced5f650756ebfc7baa0 "lualatex"
+["biber main"] 1715687819 "main.bcf" "main.bbl" "main" 1715687831
+  "main.bcf" 1715687831 107501 f846a0970f7eced5f650756ebfc7baa0 "lualatex"
   "main.bib" 1715525545 290 508b3224dfeb563635021dd0af54555f ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1715526060 "main.tex" "main.pdf" "main" 1715526064
+["lualatex"] 1715687827 "main.tex" "main.pdf" "main" 1715687831
   "/Users/posmikdc/Documents/assets/latex/beamer/beamertheme.sty" 1715525493 5911 bfc5af8e7b964aea4196146037b7cd3c ""
   "/Users/posmikdc/Documents/assets/latex/globals.tex" 1715525509 1812 38546547b18ddb18b4a9803701f969ba ""
   "/Users/posmikdc/Library/Fonts/Hack-Regular.ttf" 1692481520 393468 bda6cb5c3811bd7490648c5affca664c ""
@@ -385,16 +385,17 @@
   "/usr/local/texlive/2022/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1647637340 13565 30cc2d8cecf79afb1abb4d5c12eb919a ""
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1665256610 4558586 dd50b80f8833eabbe377c5dce840033b ""
+  "appendix/appendix-slides.tex" 1715687761 61 9a3f8e1a4667d050d1c3f38684f81ae7 ""
   "img/title.jpeg" 1715518440 61579 172d2d039a3c20b76dc0ddf804e97f80 ""
-  "main.aux" 1715526063 3906 f59095565aafcf908c3c69681f254120 "lualatex"
-  "main.bbl" 1715526056 1806 2f0b17a74dfe482f9b6359c6c146678a "biber main"
-  "main.nav" 1715526063 1687 06a6fd778cb5b745d207c48fd6270b11 "lualatex"
-  "main.out" 1715526063 364 7e7c901febe16eeb9af09b26098619ed "lualatex"
-  "main.run.xml" 1715526063 2340 a91e0df161c145f5f0a08d607492c209 "lualatex"
-  "main.tex" 1715526016 1973 c5123d8dc1e56134aa3f9c27c746cc71 ""
-  "main.toc" 1715526063 106 abb3e016fa85f6117a2fa16c04f8bced "lualatex"
-  "main.vrb" 1715526063 564 2890994054bcc04dcaa4e03a737430b5 "lualatex"
-  "template.tex" 1715525916 3719 85d8b2a0820e0e2057f85d35244b8203 ""
+  "main.aux" 1715687831 4422 712a8ca9520f8911204d389f2fbeb62e "lualatex"
+  "main.bbl" 1715687820 1806 2f0b17a74dfe482f9b6359c6c146678a "biber main"
+  "main.nav" 1715687831 2058 64a34cd185832e3c065fce1d26b99e3c "lualatex"
+  "main.out" 1715687831 445 e03b506ac3ccd8c43f451c65ecea30ae "lualatex"
+  "main.run.xml" 1715687831 2340 a91e0df161c145f5f0a08d607492c209 "lualatex"
+  "main.tex" 1715687809 1979 502a2ab33f59aba5cf89b12143a8caf7 ""
+  "main.toc" 1715687831 106 abb3e016fa85f6117a2fa16c04f8bced "lualatex"
+  "main.vrb" 1715687831 564 2890994054bcc04dcaa4e03a737430b5 "lualatex"
+  "slides/template.tex" 1715525916 3719 85d8b2a0820e0e2057f85d35244b8203 ""
   (generated)
   "main.aux"
   "main.bcf"

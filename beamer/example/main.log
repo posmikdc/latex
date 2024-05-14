@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.10.8)  12 MAY 2024 17:01
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.10.8)  14 MAY 2024 13:57
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -1398,7 +1398,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/Hack(0)/b/n on input line 39.
  (./main.nav)
-<img/title.jpeg, id=25, 1787.67876pt x 661.47125pt>
+<img/title.jpeg, id=29, 1787.67876pt x 661.47125pt>
 File: img/title.jpeg Graphic file (type jpg)
 <use img/title.jpeg>
 Package luatex.def Info: img/title.jpeg  used on input line 47.
@@ -1418,7 +1418,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./img/title.jpeg>] (./main.toc) [2
 
-] (./template.tex [3
+] (./slides/template.tex [3
 
 ]
 LaTeX Font Info:    External font `cmex7' loaded for size
@@ -1447,6 +1447,14 @@ Overfull \hbox (5.47499pt too wide) in paragraph at lines 56--56
 ]) [11
 
 </usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 77.
+
+\c@framenumberappendix=\count517
+(./appendix/appendix-slides.tex [12
+
+])
 \tf@nav=\write8
 
 \openout8 = main.nav
@@ -1458,26 +1466,26 @@ Overfull \hbox (5.47499pt too wide) in paragraph at lines 56--56
 \openout10 = main.snm
  (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7E7C901FEBE16EEB9AF09B26098619ED;364.
+(rerunfilecheck)             Checksum: E03B506AC3CCD8C43F451C65ECEA30AE;445.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 49405 strings out of 477785
+ 49434 strings out of 477785
  100000,2373549 words of node,token memory allocated
- 3954 words of node memory still in use:
-   20 hlist, 7 vlist, 3 rule, 22 disc, 2 local_par, 67 glue, 47 kern, 21 penalty, 212 glyph, 84 attribute, 127 glue_spec, 84 attribute_list, 10 write, 2 pdf_dest, 24 pdf_colorstack nodes
-   avail lists: 2:563,3:385,4:225,5:276,6:41,7:1790,8:28,9:352,10:13,11:110
- 68234 multiletter control sequences out of 65536+600000
+ 1676 words of node memory still in use:
+   16 hlist, 7 vlist, 2 rule, 2 disc, 2 local_par, 33 glue, 6 kern, 12 penalty, 28 glyph, 40 attribute, 127 glue_spec, 40 attribute_list, 5 write, 12 pdf_colorstack nodes
+   avail lists: 2:651,3:399,4:237,5:317,6:41,7:2008,8:30,9:357,10:13,11:130
+ 68251 multiletter control sequences out of 65536+600000
  110 fonts using 20462903 bytes
  128i,11n,115p,880b,1611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></Users/posmikdc/Library/Fonts/Hack-Regular.ttf></usr/local/texlive/2022/texmf-dist/fonts/truetype/typoland/lato/Lato-BoldItalic.ttf></usr/local/texlive/2022/texmf-dist/fonts/truetype/typoland/lato/Lato-Italic.ttf></usr/local/texlive/2022/texmf-dist/fonts/truetype/typoland/lato/Lato-Regular.ttf></usr/local/texlive/2022/texmf-dist/fonts/truetype/typoland/lato/Lato-Bold.ttf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (11 pages, 212171 bytes).
+Output written on main.pdf (12 pages, 212724 bytes).
 
-PDF statistics: 182 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 131072)
- 40 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 191 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 131072)
+ 48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
