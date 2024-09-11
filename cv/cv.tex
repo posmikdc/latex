@@ -1,264 +1,163 @@
-% Daniel Posmik's Curriculum Vitae
-% Email: daniel_posmik@brown.edu 
-% CV template from: https://github.com/gboeing/cv/blob/main/cv-gboeing.tex
+%https://www.stat.berkeley.edu/~paciorek/files/cv/paciorek-cv.pdf
+%https://www.stat.berkeley.edu/~paciorek/cv/cv.html
 
-\documentclass[11pt,letterpaper]{report}
+\documentclass[margin,line]{res}
 
-\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
-\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
-\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
-\usepackage{microtype}% improve text appearance with kerning, etc
-\usepackage{datetime} % enable formatting of date output
-\usepackage{tabto}    % make nice tabbing
-\usepackage{hyperref} % enable hyperlinks and pdf metadata
-\usepackage{geometry} % manually set page margins
-\usepackage{enumitem} % enumerate with [resume] option
-\usepackage{titlesec} % allow custom section fonts
-\usepackage{setspace} % custom line spacing
 
-% name 
-\newcommand{\myname}{Daniel C. Posmik}
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+% if using pdflatex:
+%\setlength{\pdfpagewidth}{\paperwidth}
+%\setlength{\pdfpageheight}{\paperheight} 
 
-% select default typefaces
-\usepackage{ebgaramond} % document's serif typeface
-\usepackage{tgheros}    % document's sans serif typeface
-
-% how far to tab for list items with left-aligned date: different fonts need different widths
-\newcommand{\listtabwidth}{1.7cm}
-
-% define font to use as document's title
-\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
-
-% set section heading fonts and before/after spacing
-\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
-\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
-\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
-
-% set subsection heading fonts and before/after spacing
-\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
-\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
-
-% set page margins (assumes letter paper)
-\geometry{body={6.5in, 9.0in},
-    left=1.0in,
-    top=1.0in}
-
-% prevent paragraph indentation
-\setlength\parindent{0em}
-
-% set line spacing
-\setstretch{0.9}
-
-% define space between list items
-\newcommand{\listitemspace}{0.25em}
-
-% make unordered lists without bullets and use compact spacing
-\renewenvironment{itemize}
-{\begin{list}{}{\setlength{\leftmargin}{0em}
-                \setlength{\parskip}{0em}
-                \setlength{\itemsep}{\listitemspace}
-                \setlength{\parsep}{\listitemspace}}}
-{\end{list}}
-
-% make bulleted compact lists 
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
 \newenvironment{list2}{
-  \begin{list}{\tiny$\bullet$}{%
+  \begin{list}{$\bullet$}{%
       \setlength{\itemsep}{0in}
       \setlength{\parsep}{0in} \setlength{\parskip}{0in}
       \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
 
-
-% make tabbed lists so content is left-aligned next to years
-\TabPositions{\listtabwidth}
-\newlist{tablist}{description}{3}
-\setlist[tablist]{leftmargin=\listtabwidth,
-    labelindent=0em,
-    topsep=0em,
-    partopsep=0em,
-    itemsep=\listitemspace,
-    parsep=\listitemspace,
-    font=\normalfont}
-
-% print only the month and year when using \today
-\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
-
-% define hyperlink appearance and metadata for pdf properties
-\hypersetup{
-    colorlinks  = true,
-    urlcolor    = black,
-    citecolor   = black,
-    linkcolor   = black,
-    pdfauthor   = {\myname},
-    pdfkeywords = {biostatistics, causal inference, statistical network analysis, nonparametric statistics},
-    pdftitle    = {\myname: Curriculum Vitae},
-    pdfsubject  = {Curriculum Vitae},
-    pdfpagemode = UseNone
-}
-
 \begin{document}
-\raggedright{}
 
-% display your name as the document title
-\namefont{\myname}
+\name{Daniel C. Posmik \vspace*{.1in}}
 
-% affiliation and contact info blocks
-\vspace{1em}
-\begin{minipage}[t]{0.700\textwidth}
-% current primary affiliation, left-aligned
-Department of Biostatistics \\
-Brown University, School of Public Health \\
-129 S Main St, Providence, RI 02903 
-\end{minipage}
-\begin{minipage}[t]{0.295\textwidth}
-% contact info details, right-aligned
-\flushright{}
-\href{mailto:daniel_posmik@brown.edu}{\tt daniel\_posmik@brown.edu} \\
-+1 (224) 507--4045 \\
-\href{https://posmikdc.github.io}{posmikdc.github.io}
-\end{minipage}
+\begin{resume}
+\section{\sc Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{3in}p{4in}}
+Brown University & {\it Cell:} +1 (224) 507-4045 \\            
+School of Public Health & {\it E-Mail:} {daniel\_posmik@brown.edu} \\    
+Department of Biostatistics & {\it Google Scholar:} user=sRuEm5oAAAAJ \\
+121 S Main St, Providence, RI 02906 & {\it Web:} posmikdc.github.io \\       
+\end{tabular}
 
-\section*{Education}
 
-\begin{tablist}
-\item[Ph.D.] \tab{}Biostatistics, Brown University \hfill \emph{Exp.} 2029
-\item[GSAL]  \tab{}Graduate Student at Large (Statistics), University of Chicago \hfill 2024
-\item[B.S.]  \tab{}Economics and Data Science, Mathematics Minor, University of Cincinnati \hfill 2022
-\item[A.A.] \tab{}Business Administration, University of Cincinnati, Blue Ash College \hfill 2020
-\end{tablist}
+\section{\sc Interests}
+Causal inference, statistical network analysis, high-dimensional statistics
 
-\section*{Publications}
+\section{\sc Education}
+{\bf Brown University}, Providence, Rhode Island USA\\
+%{\em Department of Statistics} 
+\vspace*{-.1in}
+\begin{list1}
+  \item[] Ph.D., Biostatistics \hfill Exp. May 2029
 
-\begin{tablist}
-\item[2022] \tab{}Posmik, D.C. \enquote{Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach.} \textit{Journal of Student Financial Aid}, 51 (3), \href{https://ir.library.louisville.edu/jsfa/vol51/iss3/4}{Article 4}. 
-\end{tablist}
-
-\section*{Research Experience}
-
-\begin{tablist}
-\item[2023--24] \tab{}University of Chicago, Chicago, IL\\ 
-Graduate Research Assistant, Department of Comparative Human Development \hfill 2024\\  
-\emph{Supported Professor \href{https://voices.uchicago.edu/ghong/}{Guanglei Hong}'s research on causal decomposition and mediation analysis.}
-
-\vspace*{.05in}  
 \begin{list2}
-\item Assessed instrumental variables (IV) approaches in sequential and multi-site treatment settings 
-\item Applied compliance score weighting to estimate local average treatment regime effects via IV
-\item Explored Bayesian identification, specifically treatment re-randomization via cumulative priors 
+\vspace*{.05in}
+\item First-year Advisors: Roee Gutman, Arman Oganisian
+\item First-year Research Topic: {\em Bayesian Machine Learning for Causal Inference in Electronic Health Record Data with Missing Covariates}
+\end{list2}
+\vspace*{.05in}
+\item[] Sc.M., Biostatistics (Concurrent) \hfill Exp. May 2026
+\end{list1}
+
+{\bf University of Cincinnati}, Cincinnati, Ohio USA\\
+%{\em Department of Mathematics and Statistics} 
+\vspace*{-.1in}
+\begin{list1}
+\item[] B.Sc., Data Analytics; B.B.A., Economics; Mathematics Minor \hfill May 2022
+\item[] A.A., Business Administration \hfill May 2020
+\end{list1}
+
+
+\section{\sc Honors and Awards} 
+McCall MacBain Finalist Award (Deferred for Ph.D.) (80 out of 1,000+ applicants) \hfill 2023 \\  
+Presidential Leadership Medal of Excellence (Univ. of Cinci) (4 yearly recipients) \hfill 2022 \\ 
+Non-Traditional Student of the Year (Univ. of Cinci)(1 yearly recipient) \hfill 2022 \\
+Annie Fitzgerald Community Service (Univ. of Cinci) Award (2 yearly recipients) \hfill 2021
+
+
+\section{\sc Peer-Reviewed Publications}
+{\bf Posmik, D.C.} 2022. Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach. Journal of Student Financial Aid, 51 (3), Article 4.  
+
+
+\section{\sc Academic Experience}
+{\bf Brown University}, Providence, Rhode Island USA
+
+\vspace{-.3cm}
+{\em Research Assistant, R. Gutman and A. Oganisian} \hfill {\bf June 2024 - present}\\
+{\em Graduate Student} \hfill {\bf August 2024 - present}\\
+
+\begin{list2}
+\item Includes current Ph.D.~research, Ph.D.~and Masters level coursework. 
+\item First-year graduate research assistantship with Professors Roee Gutman and Arman Oganisian.
 \end{list2}
 
-\vspace*{.1in}
-Project Associate, UChicago Energy \& Environment Lab \hfill 2023\\  
-\emph{Supported the \href{https://urbanlabs.uchicago.edu/labs/energy-environment}{E\&E Lab}'s portfolio at the intersection of causal inference and machine learning.}
+{\bf University of Chicago}, Chicago, Illinois USA
 
-\vspace*{.05in}  
+\vspace{-.3cm}
+{\em Graduate Research Assistant, Dr. Guanglei Hong} \hfill {\bf January 2024 - June 2024}\\
+{\em Teaching Assistant, Econometrics} \hfill {\bf March - May 2024}\\
+{\em Project Associate, Energy \& Environment Lab} \hfill {\bf January 2024 - June 2024}\\
+
 \begin{list2}
-\item Coordinated an RCT on the effect of agricultural machinery on illegal burning of crop residue
-\item Applied PCA to high-dimensional remote sensing data to construct a burn index for analysis
-\item Implemented a random forest algorithm to predict firm-level environmental violations
+\item Assisted Prof. Guanglei Hong with causal decomposition analysis of cumulative treatment settings; Completed graduate-level Statistics coursework
+\item TA'd undergraduate Econometrics (ECON21020). Shared responsibility for exams, homework assignments, and grades. Led weekly discussion sections.  
+\item Coordinated an RCT on the effect of agricultural machinery on illegal burning of crop residue, working with high-dimensional remote sensing data and implementing a random forest algorithm.  
 \end{list2}
-\end{tablist}
+%\section{\sc Papers in preparation}
 
-\section*{Presentations \& Talks}
+%Ventura, V., C.J. Paciorek, and J.S. Risbey.  Controlling the proportion of falsely-rejected hypotheses when conducting multiple tests with geophysical data.
 
-\subsection*{Scholarly Presentations}
-\begin{tablist}
-\item[2022] \tab{}Posmik, D.C. \enquote{Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach}, Economics Scholars Conference at the Federal Reserve Bank, Cleveland, OH, May 2. 
-\item[2021] \tab{}Posmik, D.C. \textemdash{}"\textemdash{}, University of Cincinnati Undergraduate Capstone Competition, Cincinnati, OH, April 28. 
-\end{tablist}
+%Ickes, K., C.J. Paciorek, and S. Thomas.  Effects of wild pigs on forest demographic processes in Malaysia.
 
-\subsection*{Talks}
-\begin{tablist}
-\item[2021] \tab{}Posmik, D.C. \enquote{Telling Stories with Data}, \href{https://www.youtube.com/watch?v=-Le0WTfBuBY}{TEDxUCincinnati}, Cincinnati, OH, Mar 23. 
-\end{tablist}
+\section{\sc Conference Presentations}
+Posmik, D.C. 2021. Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach. Presented at the 2021 Economic Scholars Conference (Cleveland Federal Reserve), Cleveland, Ohio, USA
 
-\section*{Grants and Awards}
+%Paciorek, C.J. and R. Rosenfeld.  2000.  Minimum classification error training in exponential language models.  2000 Spring Transcription Workshop, College Park, Maryland.
+%\vspace*{-.25in}  
+%\begin{verbatim}http://www.nist.gov/speech/publications/tw00/html/abstract.htm#cp1-50\end{verbatim}
 
-\subsection*{Awards and Honors}
-\begin{tablist}
-\item[2024] \tab{} McCall MacBain Finalist Award (Deferred for Ph.D.) (80 out of 1,000+ applicants)
-\item[2022] \tab{} Presidential Leadership Medal of Excellence (4 yearly recipients; university-wide) 
-\item[2022] \tab{} Non-Traditional Student of the Year (1 yearly recipient; college-wide) 
-\item[2021] \tab{} Annie Fitzgerald Community Service Award (2 yearly recipients; university-wide)
-\end{tablist}
+\section{\sc Professional Experience}
+{\bf The Brattle Group}, Boston, Massachusetts USA
 
-\subsection*{Competitive Grants and Fellowships}
+\vspace{-.3cm}
+{\em Research Analyst} \hfill {\bf June 2022 - December 2022}\\
+Supported the electricity practice group, conducting analyses in wholesale energy markets, regulatory policy, and congestion patterns. 
 
-\begin{tablist}
-  \item[2023] \tab{} Community Data Fellowship, University of Chicago Data Science Institute (\$4,000)
-\end{tablist}
 
-\section*{Professional Service}
+\section{\sc Community Service}
+{\bf UChicago Data Science Institute}, Chicago, Illinois USA
 
-\subsection*{Academic Journal Peer Review}
-\begin{tablist}
-  \item[2022] \tab{} \emph{Journal of Student Financial Aid}
-\end{tablist}
+\vspace{-.3cm}
+{\em Community Data Fellow} \hfill {\bf September 2023 - December 2023}\\
+Visualized impact data from the State of Illinois' Commission on Equity and Inclusion using an interactive Tableau dashboard. 
 
-\section*{Teaching}
+{\bf The Neo Initiative}, Cincinnati, Ohio USA
 
-\begin{tablist}
-\item[2024] \tab{}University of Chicago, Department of Economics, Chicago, IL\\ 
-Teaching Assistant, Econometrics (ECON21020), Spring 2024\\ 
-\vspace*{.05in}  
+\vspace{-.3cm}
+{\em President and Founder} \hfill {\bf March 2020 -  May 2022}\\
+Served 15 black-owned small businesses with pro-bono consulting services in data analytics. Hosted a virtual state-sponsored data literacy series, reaching 300+ minority-owned businesses. 
+
+\section{\sc Computing Skills} 
 \begin{list2}
-\item Hosted weekly discussion sections and held office hours for 40 students 
-\item Graded assignments and exams; responded to student questions in timely manner  
-\end{list2}
-\end{tablist} 
-
-\section*{Industry Experience}
-
-\begin{tablist}
-\item[2024] \tab{}The Brattle Group, Boston, MA\\ 
-Research Analyst, Electricity Practice Group\\ 
-\emph{Supported Brattle's Electricity Group in wholesale and retail energy matters}
-
-\vspace*{.05in}  
-\begin{list2}
-\item Analyzed energy congestion patterns to inform a utility company's \$10m transmission investment 
-\item Developed a cost-benefit model for bus fleet electrification in light of the Inflation Reduction Act 
-\end{list2}
-\end{tablist}
-
-
-\section*{Community Service}
-
-\begin{tablist}
-\item[2023] \tab{}University of Chicago, Chicago, IL\\ 
-Community Data Fellow, UChicago Data Science Institute\\  
-\emph{Created a \href{https://public.tableau.com/app/profile/daniel.posmik/viz/DSI_CEI_Dashboard_draft/Dashboard1}{dashboard} for the State of Illinois' Commission on Equity \& Inclusion.}
-
-\vspace*{.05in}  
-\begin{list2}
-\item Visualized and summarized spatio-temporal impact data from the \textit{Business Enterprise Program}
-\item Embedded dashboard on website and maintained communication with project stakeholders
+\item Statistical Packages:  R, limited exposure to Julia
+\item Languages:  Python, Lua, Git, some use of Unix shell scripts,
+\item Applications: \LaTeX, SQL, Microsoft Office 
+\item Operating Systems:  UNIX/Linux, MacOS\\ 
 \end{list2}
 
-\item[2020--22] \tab{}The Neo Initiative, Cincinnati, OH\\ 
-Founder and President\\  
-\emph{Founded a \href{https://www.linkedin.com/company/neo-initiative/}{student-led data analytics accelerator} for minority-owned small businesses in the U.S.} 
-
-\vspace*{.05in}  
+\section{\sc Professional Service} 
+Journal and Proposal Reviewer:\\
 \begin{list2}
-\item Served 15 black-owned small businesses with pro-bono consulting services in data analytics
-\item Coordinated 6 executive officers, 5 project leads, 5 mentors, and 30 analysts each semester
-\item Hosted a virtual state-sponsored data literacy series, reaching 300+ minority-owned businesses
+\item 2022: Journal of Student Financial Aid
 \end{list2}
-\end{tablist}
 
-\section*{Skills}
-
-\subsection*{Programming}
-R, Python, LaTeX, Lua, Tableau, Git 
-
-\subsection*{Languages}
-English (Fluent), German (Native), French (Advanced), Latin (Intermediate)\\
+\end{resume}
 
 % display today's date as Month Year after a vertical space below the end of the text
 \begin{center}
   \vfill
-  Updated \monthyeardate\today
+  Updated \today
 \end{center}
 
 \end{document}
