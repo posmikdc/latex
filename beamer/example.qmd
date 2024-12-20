@@ -1,0 +1,87 @@
+---
+title: A Fancy Title 
+author: Daniel C. Posmik 
+date: today
+institute: Brown University School of Public Health, Department of Biostatistics
+#bibliography: references.bib
+toc: true
+format: 
+  beamer: 
+    include-in-header: "/Users/posmikdc/Documents/assets/latex/beamer/beamerthememinimal.sty"
+    #titlegraphic: background.png
+---
+
+# Test 
+
+## Hello 
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+
+## World
+
+```{r, echo=TRUE}
+plot(1:10)
+```
+
+## Columns 
+::::  {.columns align=top .onlytextwidth}
+
+::: {.column width="40%" align=center}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+
+::::
+
+# More Testing 
+
+## Footnotes 
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+This paragraph won't be part of the note, because it isn't indented.
+
+## Incrememental bullets
+::: {.incremental}
+
+- Eat spaghetti
+- Drink wine
+
+:::
+
+## Graphic 
+
+::: {#fig-example}
+
+![](background.png)
+
+Caption of the figure
+
+:::
+
+We can also refer to the figure with @fig-example.
+
+## Slide
+
+### Alert block {.alert}
+
+Content
+
+### Example block {.example}
+
+## A Table 
+
+| Column1    | Column2    | Column3    |
+|---------------- | --------------- | --------------- |
+| Item1.1    | Item2.1    | Item3.1    |
+| Item1.2    | Item2.2    | Item3.2    |
+| Item1.3   | Item2.3   | Item3.3   |
+| Item1.4   | Item2.4   | Item3.4   |
+
