@@ -9,11 +9,23 @@
 \RequirePackage{xpatch}
 \RequirePackage{amsthm, amsmath, amssymb, amsfonts}
 \RequirePackage{tcolorbox}
+\RequirePackage{fontawesome5}
+\RequirePackage{geometry}
+
+% ====================
+% Margins
+% ====================
+
+%\geometry{
+ % top=0.1in,   
+%  bottom=0.2in, 
+%  left=0.2in,  
+ % right=0.2in  
+%}
 
 % ====================
 % Fonts
 % ====================
-
 \newfontfamily\Raleway[Ligatures=TeX]{Raleway}
 \newfontfamily\Lato[Ligatures=TeX]{Lato}
 
@@ -30,9 +42,10 @@
 
 \setbeamerfont{title page}{family = \Lato}
 \setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title page subtitle}{size=\large,series=\bfseries}
 \setbeamerfont{title page author}{size=\footnotesize}
-\setbeamerfont{title page institute}{size=\scriptsize}
-\setbeamerfont{title page date}{size = \scriptsize}
+\setbeamerfont{title page institute}{size=\footnotesize}
+\setbeamerfont{title page date}{size = \footnotesize}
 \setbeamerfont{frametitle}{family = \Lato, size=\large, series = \bfseries}
 \setbeamerfont{caption}{size=\scriptsize}
 \setbeamerfont{footnote}{size=\scriptsize}
@@ -146,13 +159,15 @@
 % ====================
 
 % Title page
-\setbeamertemplate{title page}
-{
+\setbeamertemplate{title page}{
   \begin{centering}
         \vskip5ex plus 1filll
-        {\usebeamerfont{title page title}\bfseries\usebeamercolor[fg]{title page}\inserttitle\par}
-        {\usebeamerfont{title page graphic}\centering\usebeamercolor[fg]{title graphic}\inserttitlegraphic\par}
+        {\usebeamerfont{title page title}\bfseries\usebeamercolor[fg]{title page}\textcolor{blue}{\inserttitle}\par}
+        {\usebeamerfont{title page subtitle}\bfseries\usebeamercolor[fg]{title page}\textcolor{blue}{\insertsubtitle}\par} 
+        {\usebeamerfont{title page graphic}\centering\usebeamercolor[fg]{title graphic}%
+            \resizebox{!}{0.33\textheight}{\inserttitlegraphic}\par}
         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par}
+        {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}{\faGithub\ \href{https://github.com/posmikdc}{posmikdc}}\par}
         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par}
         {\usebeamerfont{title page date}\usebeamercolor[fg]{title page}\insertdate}
         \vskip0pt plus 1filll
@@ -162,12 +177,11 @@
 % Footer
 \setbeamertemplate{footline}{
     \hfill%
-    \begin{center}
+    \begin{flushright} % Align page number to the right
       \usebeamercolor[fg]{page number in head/foot}%
       \usebeamerfont{page number in head/foot}%
-      \hspace{2em}%
       \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2ex%
-    \end{center}
+    \end{flushright}
 }
 
 % Frame title

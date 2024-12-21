@@ -1,14 +1,16 @@
 ---
 title: A Fancy Title 
-author: Daniel C. Posmik 
+#subtitle: A Subtitle 
+author: Daniel C. Posmik (He/Him/His)
 date: today
 institute: Brown University School of Public Health, Department of Biostatistics
 #bibliography: references.bib
-toc: true
-format: 
-  beamer: 
+toc: false
+format:
+  beamer:
+    aspectratio: 43
     include-in-header: "/Users/posmikdc/Documents/assets/latex/beamer/beamerthememinimal.sty"
-    #titlegraphic: background.png
+    titlegraphic: background.png
 ---
 
 # Test 
