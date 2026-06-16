@@ -11,6 +11,7 @@
 \RequirePackage{tcolorbox}
 \RequirePackage{fontawesome5}
 \RequirePackage{geometry}
+\RequirePackage{etoolbox}
 
 % ====================
 % Margins
@@ -163,9 +164,13 @@
   \begin{centering}
         \vskip5ex plus 1filll
         {\usebeamerfont{title page title}\bfseries\usebeamercolor[fg]{title page}\textcolor{blue}{\inserttitle}\par}
-        {\usebeamerfont{title page subtitle}\bfseries\usebeamercolor[fg]{title page}\textcolor{blue}{\insertsubtitle}\par} 
-        {\usebeamerfont{title page graphic}\centering\usebeamercolor[fg]{title graphic}%
-            \resizebox{!}{0.33\textheight}{\inserttitlegraphic}\par}
+        \ifx\insertsubtitle\@empty\else
+          {\usebeamerfont{title page subtitle}\bfseries\usebeamercolor[fg]{title page}\textcolor{blue}{\insertsubtitle}\par}
+        \fi
+        \ifdefempty{\inserttitlegraphic}{}{
+          {\usebeamerfont{title page graphic}\centering\usebeamercolor[fg]{title graphic}%
+            \inserttitlegraphic\par}
+        }
         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par}
         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}{\faGithub\ \href{https://github.com/posmikdc}{posmikdc}}\par}
         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par}
