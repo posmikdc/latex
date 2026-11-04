@@ -1,0 +1,94 @@
+\documentclass[margin,line]{res}
+\usepackage{hyperref}
+\usepackage[top=0.7in, bottom=0.7in]{geometry}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+
+% Compact bullet list for work experience
+\newenvironment{bullets}{%
+  \begin{list}{$\bullet$}{%
+    \setlength{\itemsep}{0in}%
+    \setlength{\parsep}{0in}%
+    \setlength{\parskip}{0in}%
+    \setlength{\topsep}{0in}%
+    \setlength{\partopsep}{0in}%
+    \setlength{\leftmargin}{0.15in}%
+    \setlength{\labelsep}{0.05in}%
+    \setlength{\labelwidth}{0.1in}}}%
+  {\end{list}}
+
+\begin{document}
+
+\name{Daniel C. Posmik \vspace*{.1in}}
+
+\begin{resume}
+
+\section{\sc Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{3in}p{4in}}
+Brown University & {Pronouns: He/Him/His} \\
+School of Public Health& {Email:} \href{mailto:daniel_posmik@brown.edu}{\texttt{daniel\_posmik@brown.edu}} \\
+Department of Biostatistics & {Google Scholar:} \href{https://scholar.google.com/citations?user=sRuEm5oAAAAJ}{\texttt{user=sRuEm5oAAAAJ}} \\
+121 S Main St, Providence, RI 02906 & \href{https://posmikdc.github.io}{\texttt{https://posmikdc.github.io}} \\
+\end{tabular}
+
+\section{\sc Interests}
+I am currently working on clinically interpretable uncertainty quantification for tau pathology structures in PET imaging. Methodologically, I am interested in understanding how latent geometry and functional representation can explain how multimodal models learn.
+
+\section{\sc Education}
+\textbf{Brown University}, Providence, Rhode Island USA \\
+Ph.D. in Biostatistics, Advisor: Ani Eloyan \hfill Exp. May 2029 
+
+\textbf{University of Cincinnati}, Cincinnati, Ohio USA \\
+B.S. in Data Analytics; B.B.A. in Economics; Mathematics Minor \hfill May 2022 \\
+A.A. in Business Administration \hfill May 2020
+
+\section{\sc Honors \\ and Awards}
+McCall MacBain Finalist Award (Deferred for Ph.D.), 80 of 1{,}000+ applicants \hfill 2023 \\
+Presidential Leadership Medal of Excellence, Univ.\ of Cincinnati, 4 yearly recipients \hfill 2022
+
+\section{\sc Work \\ Experience}
+
+\textbf{Brown University}, Providence, Rhode Island USA \\[1mm]
+\textit{Graduate Student, Department of Biostatistics} \hfill Aug. 2024{ \textemdash } Present
+\begin{bullets}
+  \item[-] Writing a review paper on statistical methods for PET imaging, covering preprocessing, data analysis and reproducibility. (\emph{In preparation})
+  \item[-] Developing a Bayesian variance estimator for principal manifold estimation that propagates PET-to-MRI alignment uncertainty through a diffusion-map embedding, yielding posterior credible bands for the estimated brain manifold. (\emph{In preparation})
+\end{bullets}
+
+\textbf{University of Chicago}, Chicago, Illinois USA \\[1mm]
+\textit{Graduate Student at Large, Department of Statistics} \hfill Aug. 2023{ \textemdash } May 2024
+\begin{bullets}
+\item[-] Research assistant for Prof.\ Guanglei Hong on methods for causal decomposition analysis; TA for Econometrics.
+\end{bullets}
+\vspace{-\parskip}\vspace{1mm} % same spacing as \\[1mm] between roles at one employer
+\textit{Project Associate, Energy and Environment Lab} \hfill Jan. 2023{ \textemdash } Aug. 2023
+\begin{bullets}
+\item[-] Led causal analyses for a randomized controlled trial on the effect of agricultural machinery and illegal crop burning in Pakistan; analyzed large remote sensing data; contributed to grant reporting.
+\end{bullets}
+
+\textbf{The Brattle Group}, Boston, Massachusetts USA\\[1mm]
+\textit{Research Analyst, Electricity Practice Group} \hfill June{ \textemdash } Dec. 2022
+\begin{bullets}
+\item[-] Conducted econometric analyses on wholesale energy markets and electricity congestion patterns; informed a utility's $\$10$m investment.
+\end{bullets}
+
+\section{\sc Publications}
+
+\textbf{D.C.\ Posmik}, Ani Eloyan (\emph{In preparation}). {Posterior Covariance Estimation on Principal Manifolds with Multiview Neuroimaging Data}. \\[1mm]
+\textbf{D.C.\ Posmik}, Renaud LaJoie, Ani Eloyan (\emph{In preparation}). {A Statistical Guide to PET Data: Preprocessing, Data Analysis, and Reproducibility} \\[1mm]
+\textbf{D.C.\ Posmik} (2022). {Predicting International Student Enrollment by Institutional Aid: A Random and Fixed Effects Approach}. \textit{Journal of Student Financial Aid}, 51 (3), Article 4.
+
+\section{\sc Skills \& \\ Languages}
+Programming Languages: R, Python \\
+Machine Learning: PyTorch \\
+Productivity: \LaTeX, Git \\
+Languages: English (fluent), German (native), French (advanced)
+
+\end{resume}
+
+\end{document}
